@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var a =parseInt(document.getElementById("a").value);
+            var b =parseInt(document.getElementById("b").value);
+            var c =parseInt(document.getElementById("c").value);
+            if(a+b > c && b+c>a && c+a >b){
+                let type;
+                if(a===b && b===c){
+                    type="equitorial";
+                }
+                else if(a===b || b===c||a===c){
+                    type="isosceles";
+                }
+                else{
+                    type="scalene";
+                }
+                //find semiperimeter
+                let s=(a+b+c)/2;
+                // area using haron's eqn
+                let area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+                alert("triangle is "+type+"\n area :"+area);
+            }
+            else{
+                alert("cannot make traingle");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="a" placeholder="side a">
+    <input type="number" name="" id="b" placeholder="side b">
+    <input type="number" name="" id="c" placeholder="side c">
+    <button onclick="check()">click</button>
+
+</body>
+</html>
