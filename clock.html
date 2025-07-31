@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live clock</title>
+    <style>
+        #clock{
+            font-size:40px;
+            font-family:'courier new';
+            color:#2b2b2b;
+            margin-top:50px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">00:00:00</div>
+    <script>
+        function updateclock(){
+            const now=new Date();
+            let hours=now.getHours().toString().padStart(2,'0');
+            let minutes=now.getMinutes().toString().padStart(2,'0');
+            let seconds=now.getSeconds().toString().padStart(2,'0');
+            let timeString=`${hours}:${minutes}:${seconds}`;
+            document.getElementById("clock").textContent=timeString;
+        }
+        setInterval(updateclock, 1000);
+        updateclock();
+    </script>
+</body>
+</html>
