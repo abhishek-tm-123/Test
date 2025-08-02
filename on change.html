@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capitals</title>
+    <script>
+        function show(){
+            var ctry = document.getElementById("cnt").value;
+            var cap = document.getElementById("cap");
+            if(ctry==="india"){
+                cap.value="delhi";
+            }
+            else if(ctry==="usa"){
+                cap.value="washington";
+            }
+            else if(ctry==="russia"){
+                cap.value="moscow";
+            }
+            else{
+                cap.value="null";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>select a country to see the capital</h2>
+    <select name="country" id="cnt" onchange="show()">
+        <option value="--select--">--select--</option>
+        <option value="india">india</option>
+        <option value="usa">usa</option>
+        <option value="russia">russia</option>
+        
+        
+    </select><br><br>
+    <label for="cap">capital :</label>
+    <input type="text" name="cap" id="cap" readonly>
+</body>
+</html>
