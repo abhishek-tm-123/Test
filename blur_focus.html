@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changec(){
+            const box=document.getElementById("inp");
+            box.style.backgroundColor="red";
+            box.style.color="blue";
+        }
+        function resetc(){
+            const box = document.getElementById("inp");
+            box.style.backgroundColor="white";
+            box.style.color="black"
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="inp" id="inp" onfocus="changec()" onblur="resetc()">
+</body>
+</html>
