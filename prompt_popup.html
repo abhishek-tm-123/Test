@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <script>
+        function sum(){
+            var n= parseFloat(prompt("enter number of elements"));
+            var arr=[];
+            var total = 0;
+
+            for(let i=0;i<n;i++){
+                var item =parseFloat(prompt("enter the "+(i+1)+" element"));
+                total=item+total;
+            }
+
+            alert("sum is "+total);
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <h2>click the button to enter numbers and get the sum :</h2>
+    <button onclick="sum()">click</button>
+    
+</body>
+</html>
